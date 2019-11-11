@@ -3,28 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use App\Manufacturer;
 
 class ManufacturersController extends Controller
 {
-
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Support\Collection
+     * Показва всички фирми в апито
      */
+    public function firms_all()
+    {
+        $firms = Manufacturer::where('isActive', 0)->get();
+        return view('manufacturers.index', compact('firms'));
+    }
+
+    public function firms_not()
+    {
+        $firms = Manufacturer::where('isActive', '!=', 0)->get();
+        return view('manufacturers.not_active', compact('firms'));
+    }
+    ///////////////////////////////////////////////////
+    /////////
     public function firms_list()
     {
-//        $firms = Manufacturer::orderBy('alphabet', 'asc')->with('Pesticides')->get()->toArray();
-//        $firms = Manufacturer::all()->where('isActive', 0);
-//        $firms = Manufacturer::all();
-//        return json_encode($firms);
+    //        $firms = Manufacturer::orderBy('alphabet', 'asc')->with('Pesticides')->get()->toArray();
+    //        $firms = Manufacturer::all()->where('isActive', 0);
+    //        $firms = Manufacturer::all();
+    //        return json_encode($firms);
 
         $firms = Manufacturer::where('isActive', 0)->get();
         return $firms;
     }
+
 
     /**
      * Store a newly created resource in storage.

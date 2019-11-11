@@ -22,3 +22,6 @@ Route::get('firm/show/{id}','ManufacturersController@show');
 Route::post('firm/store','ManufacturersController@firm_store');
 Route::put('firm/update/{id}','ManufacturersController@update');
 Route::delete('firm/{id}','ManufacturersController@destroy');
+
+Route::get('firms/all','ManufacturersController@firms_all');
+Route::get('firms/not-active','ManufacturersController@firms_not');
