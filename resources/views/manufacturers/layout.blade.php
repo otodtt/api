@@ -9,6 +9,10 @@
         .bold {
             font-weight: bold;
         }
+
+        .notActive {
+            background-color: #ffdde1;
+        }
     </style>
 </head>
 <body>

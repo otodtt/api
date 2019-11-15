@@ -19,7 +19,14 @@
         <tbody>
         <?php $n = 1; ?>
         @foreach($firms as $firm)
-            <tr>
+            <?php
+                if ($firm['isActive'] === 1) {
+                    $classNotActive = 'notActive';
+                } else {
+                    $classNotActive = '';
+                }
+            ?>
+            <tr class="<?php echo $classNotActive; ?>" >
                 <td>{!! $n++ !!}</td>
                 <td><span class="bold">{{$firm['id']}}</span></td>
                 <td>{{$firm['name']}}</td>

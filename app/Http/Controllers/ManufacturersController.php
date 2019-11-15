@@ -12,7 +12,8 @@ class ManufacturersController extends Controller
      */
     public function firms_all()
     {
-        $firms = Manufacturer::where('isActive', 0)->get();
+//        $firms = Manufacturer::where('isActive', 0)->get();
+        $firms = Manufacturer::all();
         return view('manufacturers.index', compact('firms'));
     }
 
