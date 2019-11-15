@@ -25,3 +25,7 @@ Route::delete('firm/{id}','ManufacturersController@destroy');
 
 Route::get('firms/all','ManufacturersController@firms_all');
 Route::get('firms/not-active','ManufacturersController@firms_not');
+
+
+Route::get('substances/all','SubstancesController@substances_all');
+Route::get('substances/not-active','SubstancesController@substances_not');

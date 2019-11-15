@@ -86,7 +86,7 @@
                     <a href="{{ url('/firms/all') }}">Производители</a>
                     <a href="{{ url('/culture') }}">Култури</a>
                     <a href="{{ url('/products') }}">Продукти</a>
-                    <a href="{{ url('/substances') }}">А. Вещества</a>
+                    <a href="{{ url('/substances/all') }}">А. Вещества</a>
                     <a href="{{ url('/crops') }}">ПРЗ Култури</a>
                 </div>
             </div>
